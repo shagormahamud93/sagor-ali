@@ -10,9 +10,32 @@ const socials = [
 const Footer = () => (
   <footer className="border-t border-border py-12">
     <div className="mx-auto max-w-6xl px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-      <p className="text-sm text-muted-foreground flex items-center gap-1">
-        Built with <Heart size={14} className="text-destructive" /> by Sagor Ali © {new Date().getFullYear()}
-      </p>
+       <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-sm text-muted-foreground flex items-center gap-2"
+      >
+        <span className="opacity-70">© {new Date().getFullYear()}</span>
+
+        <span className="hidden sm:inline">•</span>
+
+        <span className="gradient-text font-medium">
+          Sagor Ali
+        </span>
+
+        <span className="hidden sm:inline">•</span>
+
+        <span className="flex items-center gap-1">
+          Crafted with
+          <motion.span
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          >
+            <Heart size={14} className="text-destructive" />
+          </motion.span>
+        </span>
+      </motion.p>
       <div className="flex items-center gap-3">
         {socials.map(({ icon: Icon, href, label }) => (
           <motion.a

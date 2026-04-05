@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Heart, } from "lucide-react";
+import { Github, Linkedin, Mail, Heart,Facebook } from "lucide-react";
 
 const socials = [
+  { icon: Facebook, href: "https://www.facebook.com/shagor.akash.100/", label: "Facebook" },
   { icon: Github, href: "https://github.com/shagormahamud93", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/sagar-ali/", label: "LinkedIn" },
   { icon: Mail, href: "mailto:mahamudshagor93@gmail.com", label: "Mail" },
@@ -41,6 +42,7 @@ const Footer = () => (
           <motion.a
             key={label}
             href={href}
+            target="_black"
             aria-label={label}
             whileHover={{ scale: 1.15, y: -2 }}
             className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:shadow-lg transition-all"

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Facebook } from "lucide-react";
 
 const titles = ["MERN Stack Developer", "Front End Developer", "Flutter Developer","Creative Technologist"];
 
@@ -94,6 +94,7 @@ const Hero = () => {
 
             <div className="flex items-center gap-4 mt-12">
               {[
+                { icon: Facebook, href: "https://www.facebook.com/shagor.akash.100/" },
                 { icon: Github, href: "https://github.com/shagormahamud93" },
                 { icon: Linkedin, href: "https://www.linkedin.com/in/sagar-ali/" },
                 { icon: Mail, href: "mailto:mahamudshagor93@gmail.com" },
@@ -101,6 +102,7 @@ const Hero = () => {
                 <motion.a
                   key={i}
                   href={href}
+                  target="_black"
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
                 >
